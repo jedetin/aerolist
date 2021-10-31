@@ -162,8 +162,8 @@ function initvar() {
         for (i = 0; i < nodes.length - 1; i++) {
 
             html += "<div class='card'><div class='card-body py-3'><div class='row'>"
-            html += "<span class='col text-left'> " + getAirline(nodes[i], nodes[i + 1]) + "</span>"
-            html += "<span class='col text-center'>" + nodes[i] + " &mdash; " + nodes[i + 1] + "</span>"
+            html += "<span class='col text-left'><i class='fa fa-plane'></i> " + getAirline(nodes[i], nodes[i + 1]) + "</span>"
+            html += "<span class='col text-center'><i class='fa fa-map-marker'></i> " + nodes[i] + " &mdash; " + nodes[i + 1] + "</span>"
             html += "<span class='col text-right'>₹ " + findDist(nodes[i], nodes[i + 1]) + "</span>"
             html += "</div></div></div>"
 
@@ -173,8 +173,8 @@ function initvar() {
         msg = "We found multi-stop Flights for you.";
         for (i = 1; i < node.length - 1; i += 2) { // Loop jumped by 2 to avoid re-occurance of already destination entity
             html += "<div class='card'><div class='card-body py-3'><div class='row'>"
-            html += "<span class='col text-left'> " + getAirline(nodes[0], node[i]) + "<br>" + getAirline(node[i], node[i + 1]) + "<br>" + getAirline(node[i + 1], nodes[1]) + "<br>" + "</span>"
-            html += "<span class='col text-center'>" + nodes[0] + " &mdash; " + node[i] + "<br>" + node[i] + " &mdash; " + node[i + 1] + "<br>" + node[i + 1] + " &mdash; " + nodes[1] + "</span>"
+            html += "<span class='col text-left'><i class='fa fa-plane'></i> " + getAirline(nodes[0], node[i]) + "<br><i class='fa fa-plane'></i> " + getAirline(node[i], node[i + 1]) + "<br><i class='fa fa-plane'></i> " + getAirline(node[i + 1], nodes[1]) + "<br>" + "</span>"
+            html += "<span class='col text-center'><i class='fa fa-map-marker'></i> " + nodes[0] + " &mdash; " + node[i] + "<br><i class='fa fa-map-marker'></i> " + node[i] + " &mdash; " + node[i + 1] + "<br><i class='fa fa-map-marker'></i> " + node[i + 1] + " &mdash; " + nodes[1] + "</span>"
             html += "<span class='col text-right'> ₹" + findDist(source, node[i]) + "<br> ₹" + findDist(node[i], node[i + 1]) + "<br>₹" + findDist(node[i + 1], dest) + "</span>"
             html += "</div></div></div>"
         }
@@ -183,8 +183,8 @@ function initvar() {
         msg = "We found one stop Flights for you.";
         for (i = 0; i < node.length; i++) {
             html += "<div class='card'><div class='card-body py-3'><div class='row'>"
-            html += "<span class='col text-left'>" + getAirline(nodes[0], node[i]) + "<br>" + getAirline(node[i], nodes[1]) + "</span>"
-            html += "<span class='col text-center'>" + nodes[0] + " &mdash; " + node[i] + "<br>" + node[i] + " &mdash; " + nodes[1] + "</span>"
+            html += "<span class='col text-left'><i class='fa fa-plane'></i> " + getAirline(nodes[0], node[i]) + "<br><i class='fa fa-plane'></i> " + getAirline(node[i], nodes[1]) + "</span>"
+            html += "<span class='col text-center'><i class='fa fa-map-marker'></i> " + nodes[0] + " &mdash; " + node[i] + "<br><i class='fa fa-map-marker'></i> " + node[i] + " &mdash; " + nodes[1] + "</span>"
             html += "<span class='col text-right'> ₹" + findDist(source, node[i]) + "<br> ₹" + findDist(node[i], dest) + "</span>"
             html += "</div></div></div>"
         }

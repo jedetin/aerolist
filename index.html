@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AeroList &mdash; Find Routes.</title>
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <!--    <link href="assets/css/style.css" rel="stylesheet">
+-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 
@@ -18,25 +20,30 @@
 
 <body>
     <section>
-        <nav class="navbar bg-blue">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">AeroList</span>
+        <nav class="navbar navbar-light bg-light p-2 ">
+            <a class="navbar-brand">
+                <h2>AeroList <i class="fa fa-plane"></i></h2>
+            </a>
 
-            </div>
         </nav>
 
     </section>
     <section class="fill">
         <div class="container my-5 p-3">
 
-            <h1>AeroList.</h1>
-            <p class="lead">Find optimal route for your flights and save money.</p>
+            <div class="">
+                <h2>Find connecting routes, save money</h2>
+                <p>Airlines do operate by source airports and destinations, but a larger unknown term is <strong>Sector</strong>, used to denote a flight route, connecting two or more airports, or simply, a <em>via route</em>
+                    <br> We at Aerolist, used some magic (eh, just Data Analytics) to find you them, so your next trip can be planned easily and you can save some money
+                </p>
+                <p class="lead">Currently available for Indian Airports only.</p>
+            </div>
             <hr>
 
-            <form style="height: 75vh;">
+            <form style="height: 50vh;">
                 <div class="row">
                     <div class="form-group col-md-6 mb-3">
-                        <select class="form-filter" id="source" name="source">
+                        <select class="form-select" id="source" name="source">
                             <option>--Select Source Airport----</option>
                             <option value='AGR'>Agra</option>
                             <option value='AGX'>Agatti</option>
@@ -138,7 +145,7 @@
                     </div>
 
                     <div class="col-md-6 mb-3">
-                        <select class="form-filter" id="dest" name="dest">
+                        <select class="form-select" id="dest" name="dest">
                             <option>--Select Source Airport----</option>
                             <option value='AGR'>Agra</option>
                             <option value='AGX'>Agatti</option>
@@ -239,8 +246,8 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-md-12 mb-3 text-center">
-                    <button type="button" class="btn btn-dark" onclick="initvar()" data-toggle="modal" data-target="#exampleModal">
+                <div class="col-md-12 mb-3">
+                    <button type="button" class="btn btn-lg btn-primary btn-block" onclick="initvar()" data-toggle="modal" data-target="#exampleModal">
                         Find
                     </button>
                 </div>
@@ -306,11 +313,12 @@
             </div>
         </div>
     </section>
-    <footer class="bg-blue text-center text-lg-start">
+    <footer class="bg-dark text-white text-center text-lg-start">
         <!-- Copyright -->
-        <div class="text-center p-3">
-            © 2021 Copyright:
-            <a class="text-light" href="http://jedetin.github.io/">jedetin.github.io</a>
+        <div class="text-center p-3 text-white ">
+            <h5>All Rights Reserved © 2021</h5>
+            <p class="lead text-muted ">
+                Aerolist &mdash; <a href="https://jedetin.github.io ">jedetin.github.io</a></p>
         </div>
         <!-- Copyright -->
     </footer>
